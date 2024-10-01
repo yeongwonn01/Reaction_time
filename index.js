@@ -38,7 +38,7 @@ game.addEventListener("click",()=>{
 function prepare(){
     step=1;
     game.classList.add("red");
-    icon.src = "/image/dots.png";
+    icon.src = "./image/dots.png";
     title.innerText = "기다리세요";
     content.classList.add("hidden");
     waitTimeout = setTimeout(wait, Math.random()%4000+2000);
@@ -58,7 +58,7 @@ function success(){
     const now = new Date();
     end = now.getTime();
     game.classList.remove("green");
-    icon.src = "/image/three-o-clock-clock.png";
+    icon.src = "./image/three-o-clock-clock.png";
     title.innerText = `${end-start}ms`;
     content.classList.remove("hidden");
     content.innerText="클릭하면 다시";
@@ -78,7 +78,7 @@ function fail(){
     step = 3;
     game.classList.remove("green");
     game.classList.remove("red");
-    icon.src = "/image/느낌표.png";
+    icon.src = "./image/느낌표.png";
     content.classList.remove("hidden");
     content.innerText="클릭하면 다시";
     title.innerText="초록색이 되면 클릭하세요";
